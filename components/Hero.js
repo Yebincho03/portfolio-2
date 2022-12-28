@@ -57,6 +57,10 @@ const Hero = () => {
 };
 
 const Wrapper = styled.div`
+  .body,
+  body * {
+    cursor: none;
+  }
   .body {
     font-family: "Mochiy Pop One", sans-serif;
 
