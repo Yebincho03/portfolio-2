@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Script from "next/script";
 import styled from "styled-components";
 import React from "react";
 import { gsap } from "gsap";
@@ -46,10 +45,12 @@ const Hero = () => {
           <div className="shape shape-1"></div>
           <div className="shape shape-2"></div>
           <div className="shape shape-3"></div>
+          <div className="shape shape-4"></div>
         </div>
 
         <div className="content">
-          <h1>Hey there!</h1>
+          <h5>Hey there!</h5>
+          <h1>I'm Yebin, Front-end Developer</h1>
         </div>
       </div>
     </Wrapper>
@@ -68,7 +69,7 @@ const Wrapper = styled.div`
       position: relative;
       width: 100vw;
       height: 100vh;
-      background-color: #2128bd;
+      background-color: #031b88;
 
       .shape {
         will-change: transform;
@@ -76,22 +77,28 @@ const Wrapper = styled.div`
         border-radius: 50%;
       }
       .shape.shape-1 {
-        background: #005ffe;
-        width: 650px;
-        height: 650px;
-        margin: -325px 0 0 -325px;
+        background: #6096fd;
+        width: 750px;
+        height: 750px;
+        margin: -425px 0 0 -425px;
       }
       .shape.shape-2 {
-        background: #ffe5e3;
-        width: 440px;
-        height: 440px;
-        margin: -220px 0 0 -220px;
+        background: #aab6fb;
+        width: 500px;
+        height: 500px;
+        margin: -320px 0 0 -320px;
       }
       .shape.shape-3 {
-        background: #ffcc57;
-        width: 270px;
-        height: 270px;
-        margin: -135px 0 0 -135px;
+        background: #fb7b8e;
+        width: 350px;
+        height: 350px;
+        margin: -205px 0 0 -205px;
+      }
+      .shape.shape-4 {
+        background: #faa7b8;
+        width: 220px;
+        height: 220px;
+        margin: -130px 0 0 -130px;
       }
     }
     .content {
@@ -99,6 +106,7 @@ const Wrapper = styled.div`
       left: 0;
       position: absolute;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
@@ -107,10 +115,29 @@ const Wrapper = styled.div`
       mix-blend-mode: screen;
 
       h1 {
-        font-size: 100px;
+        font-size: 80px;
         color: #000;
         margin: 0;
-        text-align: center;
+        text-align: left;
+      }
+      h5 {
+        font-size: 30px;
+        color: #000;
+        margin: 0;
+        text-align: left;
+      }
+
+      @media (min-width: 419px) {
+        h1 {
+          font-size: 80px;
+          font-size: calc((0.05 * 100vw + (58px)));
+        }
+      }
+
+      @media (min-width: 1440px) {
+        h1 {
+          font-size: 80px;
+        }
       }
     }
   }

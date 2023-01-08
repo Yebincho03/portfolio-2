@@ -2,6 +2,7 @@ import Head from "next/head";
 import Script from "next/script";
 import Image from "next/image";
 import Hero from "../components/Hero";
+import SideBar from "../components/SideBar";
 import styled from "styled-components";
 
 export default function Home() {
@@ -14,7 +15,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Wrapper>
-        <Hero />
+        <SideBar />
+        <div>
+          <Hero />
+        </div>
       </Wrapper>
     </>
   );
@@ -23,4 +27,5 @@ export default function Home() {
 const Wrapper = styled.div`
   margin: 0;
   padding: 0;
+  display: flex;
 `;
