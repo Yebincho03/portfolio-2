@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styled from "styled-components";
 import React from "react";
+import Header from "../components/Header";
 import { gsap } from "gsap";
 import { useState, useEffect } from "react";
 
@@ -39,18 +40,17 @@ const Hero = () => {
   return (
     <Wrapper>
       <div className="body">
+        <Header />
         <div className="cursor"></div>
 
         <div className="shapes">
           <div className="shape shape-1"></div>
           <div className="shape shape-2"></div>
-          <div className="shape shape-3"></div>
-          <div className="shape shape-4"></div>
         </div>
 
         <div className="content">
-          <h5>Hey there!</h5>
-          <h1>I'm Yebin, Front-end Developer</h1>
+          <h5>creative</h5>
+          <h1>DESIGNER+DEVELOPER</h1>
         </div>
       </div>
     </Wrapper>
@@ -61,44 +61,36 @@ const Wrapper = styled.div`
   .body,
   body * {
     cursor: none;
+    background-color: #000;
+    padding: 0 2rem;
   }
   .body {
     font-family: "Mochiy Pop One", sans-serif;
+    background: url("/space.jpg") no-repeat fixed center;
+    background-size: 100vw 100vh;
 
     .shapes {
       position: relative;
       width: 100vw;
       height: 100vh;
-      background-color: #031b88;
 
       .shape {
         will-change: transform;
         position: absolute;
         border-radius: 50%;
+        z-index: 3;
       }
       .shape.shape-1 {
-        background: #6096fd;
-        width: 750px;
-        height: 750px;
-        margin: -425px 0 0 -425px;
+        border: 1px solid #aab6fb;
+        width: 60px;
+        height: 60px;
+        margin: -95px 0 0 -55px;
       }
       .shape.shape-2 {
-        background: #aab6fb;
-        width: 500px;
-        height: 500px;
-        margin: -320px 0 0 -320px;
-      }
-      .shape.shape-3 {
-        background: #fb7b8e;
-        width: 350px;
-        height: 350px;
-        margin: -230px 0 0 -230px;
-      }
-      .shape.shape-4 {
-        background: #faa7b8;
-        width: 220px;
-        height: 220px;
-        margin: -180px 0 0 -180px;
+        background: #6096fd;
+        width: 30px;
+        height: 30px;
+        margin: -80px 0 0 -40px;
       }
     }
     .content {
@@ -110,19 +102,18 @@ const Wrapper = styled.div`
       justify-content: center;
       height: 100vh;
       width: 100vw;
-      background: #fafafa;
       padding: 0 0 0 50px;
-      mix-blend-mode: screen;
+      z-index: 1;
 
       h1 {
         font-size: 80px;
-        color: #000;
+        color: #fff;
         margin: 0;
         text-align: left;
       }
       h5 {
         font-size: 30px;
-        color: #000;
+        color: #fff;
         margin: 0;
         text-align: left;
       }
