@@ -2,7 +2,7 @@ import Image from "next/image";
 import styled from "styled-components";
 import React from "react";
 
-const SideBar = () => {
+const Header = () => {
   return (
     <Wrapper>
       <div></div>
@@ -11,9 +11,8 @@ const SideBar = () => {
 };
 
 const Wrapper = styled.div`
-  width: 150px;
-  height: 100vh;
-  background-color: #212121;
+  width: 100%;
+  height: 10vh;
   display: flex;
   top: 0;
   left: 0;
@@ -21,4 +20,4 @@ const Wrapper = styled.div`
   z-index: 10;
 `;
 
-export default SideBar;
+export default Header;

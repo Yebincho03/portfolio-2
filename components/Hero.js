@@ -92,13 +92,13 @@ const Wrapper = styled.div`
         background: #fb7b8e;
         width: 350px;
         height: 350px;
-        margin: -205px 0 0 -205px;
+        margin: -230px 0 0 -230px;
       }
       .shape.shape-4 {
         background: #faa7b8;
         width: 220px;
         height: 220px;
-        margin: -130px 0 0 -130px;
+        margin: -180px 0 0 -180px;
       }
     }
     .content {
@@ -108,10 +108,10 @@ const Wrapper = styled.div`
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
       height: 100vh;
       width: 100vw;
-      background: #fff;
+      background: #fafafa;
+      padding: 0 0 0 50px;
       mix-blend-mode: screen;
 
       h1 {

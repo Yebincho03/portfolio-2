@@ -2,7 +2,7 @@ import Head from "next/head";
 import Script from "next/script";
 import Image from "next/image";
 import Hero from "../components/Hero";
-import SideBar from "../components/SideBar";
+import Header from "../components/Header";
 import styled from "styled-components";
 
 export default function Home() {
@@ -15,10 +15,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Wrapper>
-        <SideBar />
-        <div>
-          <Hero />
-        </div>
+        <Header />
+
+        <Hero />
       </Wrapper>
     </>
   );
