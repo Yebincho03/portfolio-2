@@ -4,6 +4,7 @@ import React from "react";
 import Header from "../components/Header";
 import { gsap } from "gsap";
 import { useState, useEffect } from "react";
+import { globalColor } from "../shared/Style";
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({
@@ -49,8 +50,8 @@ const Hero = () => {
         </div>
 
         <div className="content">
-          <h5>creative</h5>
-          <h1>DESIGNER+DEVELOPER</h1>
+          <h1>I'M YEBIN CHO</h1>
+          <h5>Front-end developer and designer</h5>
         </div>
       </div>
     </Wrapper>
@@ -61,14 +62,10 @@ const Wrapper = styled.div`
   .body,
   body * {
     cursor: none;
-    background-color: #000;
+    background-color: ${globalColor.grey100};
     padding: 0 2rem;
   }
   .body {
-    font-family: "Mochiy Pop One", sans-serif;
-    background: url("/space.jpg") no-repeat fixed center;
-    background-size: 100vw 100vh;
-
     .shapes {
       position: relative;
       width: 100vw;
@@ -82,14 +79,14 @@ const Wrapper = styled.div`
       }
       .shape.shape-1 {
         border: 1px solid #aab6fb;
-        width: 60px;
-        height: 60px;
+        width: 30px;
+        height: 30px;
         margin: -95px 0 0 -55px;
       }
       .shape.shape-2 {
         background: #6096fd;
-        width: 30px;
-        height: 30px;
+        width: 10px;
+        height: 10px;
         margin: -80px 0 0 -40px;
       }
     }
@@ -106,22 +103,24 @@ const Wrapper = styled.div`
       z-index: 1;
 
       h1 {
+        font-family: "Cormorant Garamond", serif;
         font-size: 80px;
-        color: #fff;
+        color: ${globalColor.primary};
         margin: 0;
-        text-align: left;
+        text-align: center;
       }
+
       h5 {
+        font-family: "Cormorant Garamond", serif;
         font-size: 30px;
         color: #fff;
         margin: 0;
-        text-align: left;
+        text-align: center;
       }
 
       @media (min-width: 419px) {
         h1 {
-          font-size: 80px;
-          font-size: calc((0.05 * 100vw + (58px)));
+          font-size: calc((0.03 * 100vw + (38px)));
         }
       }
 

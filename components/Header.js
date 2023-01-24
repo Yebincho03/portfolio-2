@@ -6,15 +6,11 @@ const Header = () => {
   return (
     <Wrapper>
       <div className="menu">
-        <div className="menuRight">
-          <h5>Yebin Cho</h5>
-          <h5>GRAPHIC DESIGNER,DEVELOPER</h5>
-        </div>
-        <div className="menuLeft">
-          <h5>works</h5>
-          <h5>about</h5>
-          <h5>contact</h5>
-        </div>
+        <h5 className="name">Yebin's Portfolio</h5>
+
+        <a href="#">
+          <h5>RESUME</h5>
+        </a>
       </div>
     </Wrapper>
   );
@@ -27,23 +23,22 @@ const Wrapper = styled.div`
   left: 0;
   display: flex;
   align-items: center;
-  border-bottom: 0.5px solid #fff;
   padding: 0 1rem;
-
-  h5:hover {
-    color: red;
-  }
 
   .menu {
     display: flex;
     width: 100%;
     justify-content: space-between;
+    color: #fff;
+    font-size: 23px;
 
-    .menuRight {
-      display: flex;
+    .name {
+      font-family: "Cormorant Garamond", serif;
     }
-    .menuLeft {
-      display: flex;
+
+    a:hover {
+      color: blue;
+      border-bottom: 1px solid blue;
     }
   }
 `;
