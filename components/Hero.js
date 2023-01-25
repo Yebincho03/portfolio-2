@@ -4,7 +4,10 @@ import React from "react";
 import Header from "../components/Header";
 import { gsap } from "gsap";
 import { useState, useEffect } from "react";
-import { globalColor } from "../shared/Style";
+import { globalColor, DescriptiveText } from "../shared/Style";
+import GithubIcon from "../public/icons/github.js";
+import Linkedin from "../public/icons/linkedin.js";
+import Behance from "../public/icons/behance";
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({
@@ -40,8 +43,8 @@ const Hero = () => {
 
   return (
     <Wrapper>
+      <Header />
       <div className="body">
-        <Header />
         <div className="cursor"></div>
 
         <div className="shapes">
@@ -50,8 +53,32 @@ const Hero = () => {
         </div>
 
         <div className="content">
-          <h1>I'M YEBIN CHO</h1>
-          <h5>Front-end developer and designer</h5>
+          <h1>YEBIN CHO</h1>
+          <h5>Creative, Front-end developer and designer</h5>
+          <DescriptiveText className="about">
+            I am passionate about solving problems through code and creating
+            interactive applications and experiences on the web.
+            <br />I am excited to work alongside other amazing programmers and
+            learn so much more!
+          </DescriptiveText>
+
+          <div className="icons">
+            <div>
+              <a href="https://github.com/Yebincho03">
+                <GithubIcon fill="#949494" />
+              </a>
+            </div>
+            <div>
+              <a href="https://github.com/Yebincho03">
+                <Linkedin fill="#949494" />
+              </a>
+            </div>
+            <div>
+              <a href="https://github.com/Yebincho03">
+                <Behance fill="#949494" />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </Wrapper>
@@ -62,8 +89,6 @@ const Wrapper = styled.div`
   .body,
   body * {
     cursor: none;
-    background-color: ${globalColor.grey100};
-    padding: 0 2rem;
   }
   .body {
     .shapes {
@@ -87,7 +112,7 @@ const Wrapper = styled.div`
         background: #6096fd;
         width: 10px;
         height: 10px;
-        margin: -80px 0 0 -40px;
+        margin: -85px 0 0 -45px;
       }
     }
     .content {
@@ -99,8 +124,8 @@ const Wrapper = styled.div`
       justify-content: center;
       height: 100vh;
       width: 100vw;
-      padding: 0 0 0 50px;
       z-index: 1;
+      padding: 0 2rem;
 
       h1 {
         font-family: "Cormorant Garamond", serif;
@@ -111,16 +136,36 @@ const Wrapper = styled.div`
       }
 
       h5 {
-        font-family: "Cormorant Garamond", serif;
-        font-size: 30px;
-        color: #fff;
+        font-family: "Outfit", sans-serif;
+        font-size: 27px;
+        font-weight: 300;
+        line-height: 35px;
+        color: ${globalColor.white};
         margin: 0;
         text-align: center;
+      }
+      .about {
+        text-align: center;
+        padding: 2rem 2rem;
+      }
+
+      .icons {
+        display: flex;
+        justify-content: center;
+        gap: 5rem;
+        padding: 1rem 2rem;
       }
 
       @media (min-width: 419px) {
         h1 {
           font-size: calc((0.03 * 100vw + (38px)));
+        }
+        h5 {
+          font-size: calc((0.01 * 100vw + (18px)));
+        }
+
+        .about {
+          padding: 1rem 1rem;
         }
       }
 

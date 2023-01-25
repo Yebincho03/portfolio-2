@@ -3,6 +3,7 @@ import Script from "next/script";
 import Image from "next/image";
 import Hero from "../components/Hero";
 import styled from "styled-components";
+import { globalColor } from "../shared/Style";
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500&family=Outfit:wght@300;500;800&display=swap"
           rel="stylesheet"
         />
         <link rel="icon" href="/favicon.ico" />
@@ -27,7 +28,8 @@ export default function Home() {
 
 const Wrapper = styled.div`
   margin: 0;
-  padding: 0;
+  padding: 0 2rem;
   display: flex;
   flex-direction: column;
+  background-color: ${globalColor.grey100};
 `;

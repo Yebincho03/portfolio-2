@@ -3,13 +3,13 @@ import styled from "styled-components";
 export const globalColor = {
   grey100: "#212121",
   grey10: "#7a7a7a",
-  grey0: "#FFFFFF",
+  white: "#FFFFFF",
   primary: "#6096fd",
   secondary: "#74FAC0",
 };
 
 export const SectionTitle = styled.h3`
-  color: ${globalColor.grey0};
+  color: ${globalColor.white};
   font-size: 30px;
   font-weight: 600;
   margin: 0;
@@ -21,13 +21,13 @@ export const SectionTitle = styled.h3`
 export const HeadLine = styled.h1`
   font-size: 30px;
   font-weight: 600;
-  color: ${globalColor.grey0};
+  color: ${globalColor.white};
   line-height: 35px;
   margin: 0;
   @media screen and (min-width: 800px) {
     font-size: 38px;
     font-weight: 600;
-    color: ${globalColor.grey0};
+    color: ${globalColor.white};
     line-height: 40px;
     margin: 0;
   }
@@ -36,13 +36,13 @@ export const HeadLine = styled.h1`
 export const ProjectText = styled.h3`
   font-size: 18px;
   font-weight: 500;
-  color: ${globalColor.grey0};
+  color: ${globalColor.white};
   line-height: 40px;
   margin: 0;
   @media screen and (min-width: 800px) {
     font-size: 20px;
     font-weight: 500;
-    color: ${globalColor.grey0};
+    color: ${globalColor.white};
     line-height: 40px;
     margin: 0;
   }
@@ -51,8 +51,8 @@ export const ProjectText = styled.h3`
 export const DescriptiveText = styled.p`
   font-style: normal;
   font-weight: 200;
-  font-size: 14px;
-  line-height: 18px;
-  color: ${globalColor.grey0};
+  font-size: 16px;
+  line-height: 20px;
+  color: ${globalColor.white};
   margin: 0;
 `;

@@ -9,7 +9,7 @@ const Header = () => {
         <h5 className="name">Yebin's Portfolio</h5>
 
         <a href="#">
-          <h5>RESUME</h5>
+          <h5 className="resume">RESUME</h5>
         </a>
       </div>
     </Wrapper>
@@ -23,7 +23,6 @@ const Wrapper = styled.div`
   left: 0;
   display: flex;
   align-items: center;
-  padding: 0 1rem;
 
   .menu {
     display: flex;
@@ -34,6 +33,11 @@ const Wrapper = styled.div`
 
     .name {
       font-family: "Cormorant Garamond", serif;
+    }
+    .resume {
+      font-family: "Outfit", sans-serif;
+      font-weight: 300;
+      font-size: 18px;
     }
 
     a:hover {
