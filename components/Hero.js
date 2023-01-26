@@ -8,7 +8,7 @@ import { globalColor, DescriptiveText } from "../shared/Style";
 import GithubIcon from "../public/icons/github.js";
 import Linkedin from "../public/icons/linkedin.js";
 import Behance from "../public/icons/behance";
-import HeroImg from "../public/heroImg.jpg";
+import HeroImg from "../public/mycharacter.png";
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({
@@ -81,7 +81,7 @@ const Hero = () => {
             </div>
           </div>
           <div className="img">
-            <Image src={HeroImg} alt="heroimg" />
+            <Image src={HeroImg} alt="heroimg" width={400} height={400} />
           </div>
         </div>
       </div>
@@ -160,7 +160,9 @@ const Wrapper = styled.div`
         padding: 1rem 2rem;
       }
       .img {
-        margin: -85px 0 0 -45px;
+        display: flex;
+        justify-content: center;
+        border-radius: 50px;
       }
 
       @media (min-width: 419px) {
