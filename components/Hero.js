@@ -8,6 +8,7 @@ import { globalColor, DescriptiveText } from "../shared/Style";
 import GithubIcon from "../public/icons/github.js";
 import Linkedin from "../public/icons/linkedin.js";
 import Behance from "../public/icons/behance";
+import HeroImg from "../public/heroImg.jpg";
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({
@@ -69,7 +70,7 @@ const Hero = () => {
               </a>
             </div>
             <div>
-              <a href="https://github.com/Yebincho03">
+              <a href="https://www.linkedin.com/in/yebincho/">
                 <Linkedin fill="#949494" />
               </a>
             </div>
@@ -78,6 +79,9 @@ const Hero = () => {
                 <Behance fill="#949494" />
               </a>
             </div>
+          </div>
+          <div className="img">
+            <Image src={HeroImg} alt="heroimg" />
           </div>
         </div>
       </div>
@@ -154,6 +158,9 @@ const Wrapper = styled.div`
         justify-content: center;
         gap: 5rem;
         padding: 1rem 2rem;
+      }
+      .img {
+        margin: -85px 0 0 -45px;
       }
 
       @media (min-width: 419px) {
