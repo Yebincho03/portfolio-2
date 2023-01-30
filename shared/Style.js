@@ -51,8 +51,8 @@ export const ProjectText = styled.h3`
 export const DescriptiveText = styled.p`
   font-style: normal;
   font-weight: 200;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 20px;
+  line-height: 25px;
   color: ${globalColor.white};
   margin: 0;
 `;

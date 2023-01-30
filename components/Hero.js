@@ -31,7 +31,6 @@ const Hero = () => {
       gsap.to(".shape", {
         x: e.clientX,
         y: e.clientY,
-        stagger: -0.1,
       });
     };
 
@@ -45,18 +44,18 @@ const Hero = () => {
   return (
     <Wrapper>
       <div className="body">
-        <Header />
-
         <div className="content">
+          <Header />
           <h1 className="myName">YEBIN CHO</h1>
           <h5 className="headline">
             Creative, Front-end developer and designer
           </h5>
           <DescriptiveText className="about">
-            I am passionate about solving problems through code and creating
+            I'm passionate about solving problems through code and creating
             interactive applications and experiences on the web.
-            <br />I am excited to work alongside other amazing programmers and
-            learn so much more!
+            <br />
+            I'm excited to work alongside other amazing programmers and learn so
+            much more!
           </DescriptiveText>
 
           <div className="icons">
@@ -108,7 +107,7 @@ const Wrapper = styled.div`
         font-family: "Outfit", sans-serif;
         font-size: 27px;
         font-weight: 300;
-        line-height: 35px;
+        line-height: 40px;
         color: ${globalColor.white};
         margin: 0;
         text-align: center;
