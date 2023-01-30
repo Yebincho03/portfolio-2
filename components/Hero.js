@@ -44,18 +44,14 @@ const Hero = () => {
 
   return (
     <Wrapper>
-      <Header />
       <div className="body">
-        <div className="cursor"></div>
-
-        <div className="shapes">
-          <div className="shape shape-1"></div>
-          <div className="shape shape-2"></div>
-        </div>
+        <Header />
 
         <div className="content">
-          <h1>YEBIN CHO</h1>
-          <h5>Creative, Front-end developer and designer</h5>
+          <h1 className="myName">YEBIN CHO</h1>
+          <h5 className="headline">
+            Creative, Front-end developer and designer
+          </h5>
           <DescriptiveText className="about">
             I am passionate about solving problems through code and creating
             interactive applications and experiences on the web.
@@ -90,56 +86,25 @@ const Hero = () => {
 };
 
 const Wrapper = styled.div`
-  .body,
-  body * {
-    cursor: none;
-  }
   .body {
-    .shapes {
-      position: relative;
-      width: 100vw;
-      height: 100vh;
-
-      .shape {
-        will-change: transform;
-        position: absolute;
-        border-radius: 50%;
-        z-index: 3;
-      }
-      .shape.shape-1 {
-        border: 1px solid #aab6fb;
-        width: 30px;
-        height: 30px;
-        margin: -95px 0 0 -55px;
-      }
-      .shape.shape-2 {
-        background: #6096fd;
-        width: 10px;
-        height: 10px;
-        margin: -85px 0 0 -45px;
-      }
-    }
     .content {
-      top: 0;
-      left: 0;
-      position: absolute;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      height: 100vh;
+      height: auto;
       width: 100vw;
-      z-index: 1;
       padding: 0 2rem;
 
-      h1 {
+      .myName {
         font-family: "Cormorant Garamond", serif;
         font-size: 80px;
         color: ${globalColor.primary};
         margin: 0;
         text-align: center;
+        padding-top: 6rem;
       }
 
-      h5 {
+      .headline {
         font-family: "Outfit", sans-serif;
         font-size: 27px;
         font-weight: 300;
@@ -162,14 +127,14 @@ const Wrapper = styled.div`
       .img {
         display: flex;
         justify-content: center;
-        border-radius: 50px;
+        padding: 5rem 0;
       }
 
       @media (min-width: 419px) {
-        h1 {
+        .myName {
           font-size: calc((0.03 * 100vw + (38px)));
         }
-        h5 {
+        .headline {
           font-size: calc((0.01 * 100vw + (18px)));
         }
 
@@ -179,7 +144,7 @@ const Wrapper = styled.div`
       }
 
       @media (min-width: 1440px) {
-        h1 {
+        .myName {
           font-size: 80px;
         }
       }

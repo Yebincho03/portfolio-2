@@ -28,7 +28,7 @@ export default function Home() {
 
 const Wrapper = styled.div`
   margin: 0;
-  padding: 0 2rem;
+  padding: 0;
   display: flex;
   flex-direction: column;
   background-color: ${globalColor.grey100};

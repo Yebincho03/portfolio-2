@@ -30,6 +30,7 @@ const Wrapper = styled.div`
     justify-content: space-between;
     color: #fff;
     font-size: 23px;
+    padding: 0 2rem;
 
     .name {
       font-family: "Cormorant Garamond", serif;
