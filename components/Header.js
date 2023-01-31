@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styled from "styled-components";
 import React from "react";
+import { globalColor } from "../shared/Style";
 
 const Header = () => {
   return (
@@ -18,7 +19,7 @@ const Header = () => {
 
 const Wrapper = styled.div`
   width: 100%;
-  height: 10vh;
+  height: 15vh;
   top: 0;
   left: 0;
   display: flex;
@@ -27,23 +28,14 @@ const Wrapper = styled.div`
   .menu {
     display: flex;
     width: 100%;
+    font-family: "Cormorant Garamond", serif;
     justify-content: space-between;
     color: #fff;
-    font-size: 23px;
+    font-size: 29px;
     padding: 0 2rem;
 
-    .name {
-      font-family: "Cormorant Garamond", serif;
-    }
-    .resume {
-      font-family: "Outfit", sans-serif;
-      font-weight: 300;
-      font-size: 18px;
-    }
-
     a:hover {
-      color: blue;
-      border-bottom: 1px solid blue;
+      color: ${globalColor.primary};
     }
   }
 `;

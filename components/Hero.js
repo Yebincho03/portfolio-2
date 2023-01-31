@@ -75,8 +75,14 @@ const Hero = () => {
               </a>
             </div>
           </div>
-          <div className="img">
-            <Image src={HeroImg} alt="heroimg" width={400} height={400} />
+          <div className="imgContainer">
+            <Image
+              className="image"
+              src={HeroImg}
+              alt="heroimg"
+              width={400}
+              height={400}
+            />
           </div>
         </div>
       </div>
@@ -123,10 +129,15 @@ const Wrapper = styled.div`
         gap: 5rem;
         padding: 1rem 2rem;
       }
-      .img {
+      .imgContainer {
         display: flex;
         justify-content: center;
         padding: 5rem 0;
+        object-fit: cover;
+
+        .image {
+          object-fit: cover;
+        }
       }
 
       @media (min-width: 419px) {

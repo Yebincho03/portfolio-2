@@ -1,0 +1,18 @@
+[
+  {
+    "link": "/icons/html5.svg",
+    "alt": "HTML5"
+  },
+  {
+    "link": "/icons/css3.svg",
+    "alt": "CSS"
+  },
+  {
+    "link": "/icons/javascript.svg",
+    "alt": "Javascript"
+  },
+  {
+    "link": "/icons/react.svg",
+    "alt": "React"
+  }
+]

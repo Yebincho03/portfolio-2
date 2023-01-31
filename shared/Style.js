@@ -9,12 +9,13 @@ export const globalColor = {
 };
 
 export const SectionTitle = styled.h3`
-  color: ${globalColor.white};
-  font-size: 30px;
-  font-weight: 600;
+  color: ${globalColor.grey10};
+  font-size: 20px;
+  font-weight: 400;
   margin: 0;
+  font-family: "Outfit", sans-serif;
   @media screen and (min-width: 800px) {
-    font-size: 38px;
+    font-size: 25px;
   }
 `;
 
