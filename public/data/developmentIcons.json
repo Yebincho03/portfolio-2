@@ -14,5 +14,33 @@
   {
     "link": "/icons/react.svg",
     "alt": "React"
+  },
+  {
+    "link": "/icons/sass.svg",
+    "alt": "Sass"
+  },
+  {
+    "link": "/icons/nextjs.svg",
+    "alt": "Next.js"
+  },
+  {
+    "link": "/icons/git.svg",
+    "alt": "git"
+  },
+  {
+    "link": "/icons/jquery.svg",
+    "alt": "jquery"
+  },
+  {
+    "link": "/icons/firebase.svg",
+    "alt": "firebase"
+  },
+  {
+    "link": "/icons/apollo-graphql.svg",
+    "alt": "graphql"
+  },
+  {
+    "link": "/icons/nativeBase.svg",
+    "alt": "nativeBase"
   }
 ]

@@ -52,24 +52,34 @@ const Wrapper = styled.div`
     justify-content: center;
     gap: 2rem;
 
-    @media screen and (min-width: 430px) {
-      display: flex;
-      flex-direction: row;
-    }
-
     .skill-box {
-      width: 100vw;
+      width: 100%;
       height: auto;
-      border: 1px solid ${globalColor.grey10};
-      border-radius: 20px;
       text-align: center;
       font-family: "Outfit", sans-serif;
       font-size: 20px;
       font-weight: 400;
-      padding: 2rem;
+
+      .box-title {
+        padding: 1rem 0;
+      }
 
       span {
         color: ${globalColor.grey10};
+      }
+
+      .toolWrapper {
+        padding: 2rem;
+        border: 1px solid ${globalColor.grey10};
+        border-radius: 20px;
+      }
+    }
+    @media screen and (min-width: 730px) {
+      display: flex;
+      flex-direction: row;
+
+      .skill-box {
+        max-width: 33vw;
       }
     }
   }
@@ -80,12 +90,8 @@ const SkillWrapper = styled.div`
   align-items: center;
   justify-content: center;
   gap: 1em;
-  margin-top: 2vh;
+
   flex-wrap: wrap;
-  @media screen and (min-width: 800px) {
-    padding: 1em;
-    max-width: 830px;
-  }
 `;
 
 export default Skill;

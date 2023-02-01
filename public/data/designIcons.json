@@ -14,5 +14,17 @@
   {
     "link": "/icons/figma.svg",
     "alt": "Figma"
+  },
+  {
+    "link": "/icons/wordpress.svg",
+    "alt": "wordpress"
+  },
+  {
+    "link": "/icons/after-effects-1.svg",
+    "alt": "After Effects"
+  },
+  {
+    "link": "/icons/premiere-pro-cc.svg",
+    "alt": "Premiere Pro"
   }
 ]
