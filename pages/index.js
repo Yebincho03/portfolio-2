@@ -1,7 +1,6 @@
 import Head from "next/head";
-import Script from "next/script";
 import Image from "next/image";
-import Hero from "../components/Hero";
+import Work from "../components/Work";
 import styled from "styled-components";
 import { globalColor } from "../shared/Style";
 import Skill from "../components/Skill";
@@ -21,8 +20,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Wrapper>
-        <Hero />
-        <Skill />
+        <Work />
       </Wrapper>
     </>
   );
@@ -33,5 +31,5 @@ const Wrapper = styled.div`
   padding: 0;
   display: flex;
   flex-direction: column;
-  background-color: ${globalColor.grey100};
+  background-color: ${globalColor.white};
 `;
