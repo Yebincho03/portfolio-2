@@ -3,37 +3,46 @@ import styled, { keyframes } from "styled-components";
 import { globalColor } from "../shared/Style";
 import Website from "../public/thecompany-01.png";
 import Courte from "../public/courte.png";
+import Poster from "../public/poster.png";
+import Picbeak from "../public/picbeak-image.png";
 
 const Project = () => {
   return (
     <Container>
-      <div className="featureBox">
+      <div className="featureBox grid-1">
         <div className="wrapper-1 box">
           <Image className="box-img" src={Website} />
         </div>
-        <p className="featureTitle">Immigration consulting website</p>
-        <p className="featureSub">Web Design / 2022</p>
+        <p className="featureTitle p1">Immigration consulting website</p>
+        <p className="featureSub p1">Web Design / 2022</p>
       </div>
-      <div className="featureBox">
+      <div className="featureBox grid-2">
         <div className="wrapper-2 box">
           <Image className="box-img" src={Courte} />
         </div>
         <p className="featureTitle">Courte Application</p>
         <p className="featureSub">Front-developer / 2022</p>
       </div>
-      <div className="featureBox">
+      <div className="featureBox grid-3">
         <div className="wrapper-3 box">
-          <Image className="box-img" />
+          <Image className="box-img3" src={Poster} />
         </div>
         <p className="featureTitle">Poster Design</p>
         <p className="featureSub">Graphic Design / 2022</p>
       </div>
-      <div className="featureBox">
+      <div className="featureBox grid-4">
         <div className="wrapper-4 box">
-          <Image className="box-img" />
+          <Image className="box-img4" src={Picbeak} />
         </div>
-        <p className="featureTitle box4">Picbeak Web Application</p>
-        <p className="featureSub box4">Front-developer / 2022</p>
+        <p className="featureTitle p4">Picbeak Web Application</p>
+        <p className="featureSub p4">Front-developer / 2022</p>
+      </div>
+      <div className="featureBox grid-5">
+        <div className="wrapper-5 box">
+          <Image className="box-img5" />
+        </div>
+        <p className="featureTitle">Product Photography</p>
+        <p className="featureSub">Visual Styling / 2022</p>
       </div>
     </Container>
   );
@@ -44,17 +53,28 @@ const Container = styled.div`
   margin-right: 1rem;
   margin-left: 1rem;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto auto auto;
+  grid-template-rows: auto;
   grid-column-gap: 108px;
   grid-row-gap: 24px;
   height: 100vh;
   font-family: "outfit", sans-serif;
 
-  @media (max-width: 768px) {
+
+  @media (max-width: 900px) {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows: repeat(5, 1fr);
     grid-row-gap: 100px;
+    grid-column-gap: 0px;
+    margin-top:2rem;
+
+    .grid-1,
+    .grid-2,
+    .grid-3,
+    .grid-4,
+    .grid-5{
+      grid-column: 1/ span 1;
+    }
 
     .featureBox {
       justify-self: center;
@@ -62,7 +82,8 @@ const Container = styled.div`
     .wrapper-1,
     .wrapper-2,
     .wrapper-3,
-    .wrapper-4 {
+    .wrapper-4,
+    .wrapper-5 {
       margin-top: 0rem !important;
     }
     .wrapper-1 {
@@ -71,16 +92,23 @@ const Container = styled.div`
     .wrapper-2 {
       line-height: 40 !important;
     }
+    .wrapper-3,
+    .wrapper-4{
+      line-height: 35 !important;
+    }
     .box {
       width: 350px !important;
       height: 350px !important;
     }
-    .box-img {
+    .box-img,
+    .box-img4 {
       width: 300px !important;
       height: auto !important;
     }
+    .wrapper-1,
+    .p1,
     .wrapper-4,
-    .box4 {
+    .p4 {
       margin-left: 0rem !important;
     }
 
@@ -90,9 +118,14 @@ const Container = styled.div`
     }
   }
 
+
+  .grid-5{
+    grid-column: 1 / span 2;
+  }
+
   .featureBox {
     justify-self: center;
-    .box4 {
+    .p4 {
       margin-left: -8rem;
     }
 
@@ -110,11 +143,15 @@ const Container = styled.div`
       height: auto;
     }
     .wrapper-1 {
+      margin-left: 2rem;
       margin-top: 2rem;
       width: 500px;
       height: 438px;
       line-height: 40;
       background: linear-gradient(180deg, #e4f2ff 0%, #d3e5ff 100%);
+    }
+    .p1{
+      margin-left: 2rem;
     }
     .featureTitle {
       padding-top: 10px;
@@ -138,28 +175,43 @@ const Container = styled.div`
     }
 
     .wrapper-3 {
+      margin-top: -7rem;
       width: 400px;
       height: 500px;
-      line-height: 55;
+      line-height: 50;
       background: linear-gradient(35.32deg, #effeff -2.93%, #daf2ff 99.99%);
       .box-img3 {
-        width: 400px;
+        width: 260px;
         height: auto;
       }
     }
+
     .wrapper-4 {
       margin-left: -8rem;
-      margin-top: 5rem;
+      margin-top: 6rem;
       width: 500px;
       height: 300px;
-      line-height: 55;
+      line-height: 33;
       background: linear-gradient(
         109.64deg,
         rgba(255, 246, 215, 0.62) 22.8%,
         rgba(211, 255, 220, 0.52375) 98.57%
       );
       .box-img4 {
-        width: 400px;
+        width: 350px;
+        height: auto;
+      }
+    }
+
+    .wrapper-5 {
+      margin-top: 6rem;
+      width: 1000px;
+      height: 350px;
+      line-height: 33;
+      background: linear-gradient(93.19deg, rgba(255, 240, 223, 0.6) 7.54%, rgba(236, 218, 255, 0.56) 98.33%);
+      );
+      .box-img5 {
+        width: 350px;
         height: auto;
       }
     }

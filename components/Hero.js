@@ -8,7 +8,6 @@ import { globalColor, DescriptiveText } from "../shared/Style";
 import GithubIcon from "../public/icons/github.js";
 import Linkedin from "../public/icons/linkedin.js";
 import Behance from "../public/icons/behance";
-import HeroImg from "../public/mycharacter.png";
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({
@@ -76,13 +75,7 @@ const Hero = () => {
             </div>
           </div>
           <div className="imgContainer">
-            <Image
-              className="image"
-              src={HeroImg}
-              alt="heroimg"
-              width={400}
-              height={400}
-            />
+            <Image className="image" alt="heroimg" width={400} height={400} />
           </div>
         </div>
       </div>
