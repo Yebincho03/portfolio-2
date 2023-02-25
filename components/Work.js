@@ -22,7 +22,7 @@ const Work = () => {
 
 const Wrapper = styled.div`
   width: 100vw;
-  height: 1000vh;
+  height: auto;
   top: 0;
   left: 0;
   display: flex;
