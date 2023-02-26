@@ -15,9 +15,11 @@ const Project = () => {
   return (
     <Container>
       <div className="featureBox grid-1">
-        <div className="wrapper-1 box">
-          <Image className="box-img" src={Website} />
-        </div>
+        <Link href="https://www.the-company.ca">
+          <div className="wrapper-1 box">
+            <Image className="box-img" src={Website} />
+          </div>
+        </Link>
         <p className="featureTitle p1">Immigration consulting website</p>
         <p className="featureSub p1">Web Design / 2022</p>
       </div>

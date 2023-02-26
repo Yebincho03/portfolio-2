@@ -3,18 +3,18 @@ import { globalColor, SectionTitle, DescriptiveText } from "../shared/Style";
 import styled from "styled-components";
 import Image from "next/image";
 import Header from "../components/Header";
+import ResumeImage from "../public/images/yebinCho-resume.jpg";
 
 function Resume() {
   return (
     <Container>
-      <Header />
       <ImageContainer>
+        <Header />
         <Image
-          src=""
+          className="image"
+          src={ResumeImage}
           objectFit={"cover"}
           quality={100}
-          width={1000}
-          height={1400}
           alt="resume"
         />
       </ImageContainer>
@@ -32,7 +32,10 @@ const ImageContainer = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding: 10vh 0;
+  .image {
+    width: 900px;
+    height: auto;
+  }
 `;
 
 export default Resume;
