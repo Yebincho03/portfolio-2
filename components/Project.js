@@ -15,7 +15,7 @@ const Project = () => {
   return (
     <Container>
       <div className="featureBox grid-1">
-        <Link href="https://www.the-company.ca">
+        <Link href="https://www.the-company.ca" target="_blank">
           <div className="wrapper-1 box">
             <Image className="box-img" src={Website} />
           </div>
@@ -24,16 +24,23 @@ const Project = () => {
         <p className="featureSub p1">Web Design / 2022</p>
       </div>
       <div className="featureBox grid-2">
-        <div className="wrapper-2 box">
-          <Image className="box-img" src={Courte} />
-        </div>
+        <Link href="https://www.courte.app/" target="_blank">
+          <div className="wrapper-2 box">
+            <Image className="box-img" src={Courte} />
+          </div>
+        </Link>
         <p className="featureTitle">Courte Application</p>
         <p className="featureSub">Front-developer / 2022</p>
       </div>
       <div className="featureBox grid-3">
-        <div className="wrapper-3 box">
-          <Image className="box-img3" src={Poster} />
-        </div>
+        <Link
+          href="https://www.behance.net/gallery/164680297/Poster-designs"
+          target="_blank"
+        >
+          <div className="wrapper-3 box">
+            <Image className="box-img3" src={Poster} />
+          </div>
+        </Link>
         <p className="featureTitle">Poster Design</p>
         <p className="featureSub">Graphic Design / 2022</p>
       </div>
@@ -45,11 +52,16 @@ const Project = () => {
         <p className="featureSub p4">Front-developer / 2022</p>
       </div>
       <div className="featureBox grid-5">
-        <div className="wrapper-5 box">
-          <Image className="box-img5 photo1" src={Photo1} />
-          <Image className="box-img5 photo2" src={Photo2} />
-          <Image className="box-img5 photo3" src={Photo3} />
-        </div>
+        <Link
+          href="https://www.behance.net/gallery/164680771/Product-Photograhpy"
+          target="_blank"
+        >
+          <div className="wrapper-5 box">
+            <Image className="box-img5 photo1" src={Photo1} />
+            <Image className="box-img5 photo2" src={Photo2} />
+            <Image className="box-img5 photo3" src={Photo3} />
+          </div>
+        </Link>
         <p className="featureTitle">Product Photography</p>
         <p className="featureSub">Visual Styling / 2022</p>
       </div>

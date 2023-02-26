@@ -1,10 +1,20 @@
 import Image from "next/image";
 import styled from "styled-components";
-import React from "react";
 import { globalColor } from "../shared/Style";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 const Header = () => {
+  const [name, setName] = useState([]);
+  useEffect(() => {
+    const pathname = window.location.href;
+    const splitLocation = pathname.split("/");
+
+    return () => {
+      setName(splitLocation);
+    };
+  }, []);
+
   return (
     <Wrapper>
       <div className="menu">
@@ -13,15 +23,31 @@ const Header = () => {
         </Link>
 
         <div className="navigation-wrap">
-          <Link href="/about">
-            <span className="navigation-items">About</span>
-          </Link>
-          <Link href="/">
-            <span className="navigation-items">Work</span>
-          </Link>
-          <Link href="/resume">
-            <span className="navigation-items">Resume</span>
-          </Link>
+          <span
+            className={
+              name[3] === "" ? "navigation-items active" : "navigation-items"
+            }
+          >
+            <Link href="/">Work</Link>
+          </span>
+          <span
+            className={
+              name[3] === "about"
+                ? "navigation-items active"
+                : "navigation-items"
+            }
+          >
+            <Link href="/about">About</Link>
+          </span>
+          <span
+            className={
+              name[3] === "resume"
+                ? "navigation-items active"
+                : "navigation-items"
+            }
+          >
+            <Link href="/resume">Resume</Link>
+          </span>
         </div>
       </div>
     </Wrapper>
@@ -49,12 +75,12 @@ const Wrapper = styled.div`
       display: flex;
       gap: 2rem;
       color: ${globalColor.grey10};
-      a:hover {
+      span:hover {
         color: ${globalColor.grey100};
         transform: translateY(-0.22em);
         transition: transform 0.5s ease;
       }
-      a:active {
+      .active {
         color: ${globalColor.grey100};
       }
     }

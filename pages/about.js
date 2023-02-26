@@ -12,7 +12,7 @@ function About() {
     <Container>
       <Header />
       <div className="wrapper">
-        <div className="img-container grid-1">
+        <div className="img-container grid-1 grid">
           <Image className="deco item1" src={Heart} alt="heart" />
           <Image className="deco item2" src={X} alt="x" />
           <Image
@@ -21,7 +21,7 @@ function About() {
             alt="Yebin Cho image"
           />
         </div>
-        <div className="content-section grid-2">
+        <div className="content-section grid-2 grid">
           <p className="headline">
             I’m Yebin Cho, a <strong> Web and Graphic designer </strong> and{" "}
             <strong>Front-end Developer</strong>.
@@ -35,7 +35,7 @@ function About() {
             relationships with the people I work with.
           </p>
         </div>
-        <div className="education grid-3">
+        <div className="education grid-3 grid">
           <span className="subTitle">Education</span>
           <div className="section">
             <p className="small-text bold">
@@ -60,7 +60,7 @@ function About() {
             </p>
           </div>
         </div>
-        <div className="experience grid-4">
+        <div className="experience grid-4 grid">
           <span className="subTitle">Experience</span>
           <div className="section">
             <p className="small-text bold">Web &amp; Graphic Designer</p>
@@ -82,7 +82,7 @@ function About() {
             </p>
           </div>
         </div>
-        <div className="contact grid-5">
+        <div className="contact grid-5 grid">
           <span className="subTitle">Contact Me</span>
           <div className="section">
             <p className="small-text bold">EMAIL</p>
@@ -117,6 +117,25 @@ const Container = styled.div`
     color: ${globalColor.grey10};
     font-family: "outfit", sans-serif;
     font-weight: 300;
+
+    @media (max-width: 850px) {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, 1fr);
+      grid-row-gap: 50px;
+      grid-column-gap: 0px;
+
+      .grid {
+        justify-self: center;
+        padding: 0 3rem;
+        text-align: center;
+      }
+
+      .grid-2 {
+        grid-column: 1 / span 1 !important;
+        grid-column-start: 1 !important;
+      }
+    }
 
     .grid-2 {
       grid-column: 1 / span 2;
