@@ -2,10 +2,9 @@ import Image from "next/image";
 import styled from "styled-components";
 import React from "react";
 import { globalColor } from "../shared/Style";
-import DecoImage from "../public/decoImage.png";
 import Header from "../components/Header.js";
 import Project from "./Project";
-
+import decoImage from "../public/images/decoImage.png";
 const Work = () => {
   return (
     <Wrapper>
@@ -36,7 +35,7 @@ const Wrapper = styled.div`
     font-weight: 700;
     padding: 20vh 5vw;
     color: #000;
-    background-image: url("decoImage.png");
+    background-image: url("../images/decoImage.png");
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: contain;

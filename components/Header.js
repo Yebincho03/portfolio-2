@@ -2,25 +2,26 @@ import Image from "next/image";
 import styled from "styled-components";
 import React from "react";
 import { globalColor } from "../shared/Style";
+import Link from "next/link";
 
 const Header = () => {
   return (
     <Wrapper>
       <div className="menu">
-        <a href="#">
+        <Link href="/">
           <span className="name">Yebin Cho</span>
-        </a>
+        </Link>
 
         <div className="navigation-wrap">
-          <a href="#">
+          <Link href="/about">
             <span className="navigation-items">About</span>
-          </a>
-          <a href="#">
+          </Link>
+          <Link href="/">
             <span className="navigation-items">Work</span>
-          </a>
-          <a href="#">
+          </Link>
+          <Link href="/resume">
             <span className="navigation-items">Resume</span>
-          </a>
+          </Link>
         </div>
       </div>
     </Wrapper>

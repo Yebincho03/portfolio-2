@@ -1,14 +1,15 @@
+import Link from "next/link";
 import Image from "next/image";
 import styled, { keyframes } from "styled-components";
 import { globalColor } from "../shared/Style";
-import Website from "../public/thecompany-01.png";
-import Courte from "../public/courte.png";
-import Poster from "../public/poster.png";
-import Picbeak from "../public/picbeak-image.png";
-import Photo1 from "../public/photo-1.png";
-import Photo2 from "../public/photo-2.png";
-import Photo3 from "../public/photo-3.png";
-import Aboutme from "../public/me.png";
+import Website from "../public/images/thecompany-01.png";
+import Courte from "../public/images/courte.png";
+import Poster from "../public/images/poster.png";
+import Picbeak from "../public/images/picbeak-image.png";
+import Photo1 from "../public/images/photo-1.png";
+import Photo2 from "../public/images/photo-2.png";
+import Photo3 from "../public/images/photo-3.png";
+import Aboutme from "../public/images/me.png";
 
 const Project = () => {
   return (
@@ -51,13 +52,13 @@ const Project = () => {
         <p className="featureSub">Visual Styling / 2022</p>
       </div>
       <div className="about-wrapper grid-6">
-        <a href="#">
+        <Link href="/about">
           <div className="button">
             <Image className="aboutme-small" src={Aboutme} />
             <span className="btn">About Me</span>
             <div class="button__drow"></div>
           </div>
-        </a>
+        </Link>
       </div>
     </Container>
   );
@@ -266,16 +267,16 @@ const Container = styled.div`
         z-index: -1;
         border: 1rem;
         transform-origin: 1rem 1rem;
-        top: 10rem;
-        left: 10px;
-        width: 2rem;
+        top: 9rem;
+        left: -5px;
+        width: 1.5rem;
         height: 0;
         transform: rotate(-95deg);
         background: lightblue;
       }
 
       .btn {
-        font-size: 50px;
+        font-size: 40px;
         color: ${globalColor.grey100};
       }
     }
@@ -284,37 +285,8 @@ const Container = styled.div`
       transition: transform 0.3s ease;
     }
 
-    .button__drow::before {
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 2rem;
-      border-radius: 1rem;
-      transform-origin: 1rem 1rem;
-      transform: rotate(80deg);
-    }
-
-    .button__drow::after {
-      top: -10px;
-      left: 45px;
-      width: 0;
-      height: 2rem;
-      border-radius: 1rem;
-      transform-origin: 1rem 1rem;
-      transform: rotate(71deg);
-    }
     .button:hover .button__drow {
       animation: drow1 ease-in 0.06s;
-      animation-fill-mode: forwards;
-    }
-
-    .button:hover .button__drow::before {
-      animation: drow2 linear 0.08s 0.06s;
-      animation-fill-mode: forwards;
-    }
-
-    .button:hover .button__drow::after {
-      animation: drow3 linear 0.03s 0.14s;
       animation-fill-mode: forwards;
     }
 
@@ -324,36 +296,7 @@ const Container = styled.div`
       }
 
       100% {
-        height: 200px;
-      }
-    }
-
-    @keyframes drow2 {
-      0% {
-        width: 0;
-        opacity: 0;
-      }
-
-      10% {
-        opacity: 0;
-      }
-
-      11% {
-        opacity: 1;
-      }
-
-      100% {
-        height: 200px;
-      }
-    }
-
-    @keyframes drow3 {
-      0% {
-        height: 0;
-      }
-
-      100% {
-        height: 100px;
+        height: 180px;
       }
     }
   }
