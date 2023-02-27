@@ -1,10 +1,7 @@
 import Head from "next/head";
-import Image from "next/image";
-import Work from "../components/Work";
 import styled from "styled-components";
 import { globalColor } from "../shared/Style";
-import Skill from "../components/Skill";
-import Header from "../components/Header";
+import Project from "../components/Project";
 
 export default function Home() {
   return (
@@ -21,7 +18,7 @@ export default function Home() {
         <link rel="icon" href="./favicon.ico" />
       </Head>
       <Wrapper>
-        <Work />
+        <Project />
       </Wrapper>
     </>
   );

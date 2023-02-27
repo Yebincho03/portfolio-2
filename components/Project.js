@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import Header from "./Header.js";
 import styled from "styled-components";
 import { globalColor } from "../shared/Style";
 import Website from "../public/images/thecompany-01.png";
@@ -13,73 +14,111 @@ import Aboutme from "../public/images/me.png";
 
 const Project = () => {
   return (
-    <Container>
-      <div className="featureBox grid-1 grid">
-        <Link href="https://www.the-company.ca" target="_blank">
-          <div className="wrapper-1 box">
-            <Image className="box-img" src={Website} />
-          </div>
-          <p className="featureTitle p1">Immigration consulting website</p>
-          <p className="featureSub p1">Web Design / 2022</p>
-        </Link>
+    <Wrapper>
+      <Header />
+      <div className="headline">
+        Curious Designer,
+        <br />
+        Creative Developer
       </div>
-      <div className="featureBox grid-2 grid">
-        <Link href="/courte">
-          <div className="wrapper-2 box">
-            <Image className="box-img" src={Courte} />
-          </div>
-          <p className="featureTitle">Courte Application</p>
-          <p className="featureSub">Front-developer / 2022</p>
-        </Link>
-      </div>
-      <div className="featureBox grid-3 grid">
-        <Link
-          href="https://www.behance.net/gallery/164680297/Poster-designs"
-          target="_blank"
-        >
-          <div className="wrapper-3 box">
-            <Image className="box-img3" src={Poster} />
-          </div>
-          <p className="featureTitle">Poster Design</p>
-          <p className="featureSub">Graphic Design / 2022</p>
-        </Link>
-      </div>
-      <div className="featureBox grid-4 grid">
-        <Link href="/picbeak">
-          <div className="wrapper-4 box">
-            <Image className="box-img4" src={Picbeak} />
-          </div>
-          <p className="featureTitle p4">Picbeak Web Application</p>
-          <p className="featureSub p4">Front-developer / 2022</p>
-        </Link>
-      </div>
-      <div className="featureBox grid-5 grid">
-        <Link
-          href="https://www.behance.net/gallery/164680771/Product-Photograhpy"
-          target="_blank"
-        >
-          <div className="wrapper-5 box">
-            <Image className="box-img5 photo1" src={Photo1} />
-            <Image className="box-img5 photo2" src={Photo2} />
-            <Image className="box-img5 photo3" src={Photo3} />
-          </div>
-          <p className="featureTitle">Product Photography</p>
-          <p className="featureSub">Visual Styling / 2022</p>
-        </Link>
-      </div>
-      <div className="about-wrapper grid-6 grid">
-        <Link href="/about">
-          <div className="button">
-            <Image className="aboutme-small" src={Aboutme} />
-            <span className="btn">About Me</span>
-            <div class="button__drow"></div>
-          </div>
-        </Link>
-      </div>
-    </Container>
+      <Container>
+        <div className="featureBox grid-1 grid">
+          <Link href="https://www.the-company.ca" target="_blank">
+            <div className="wrapper-1 box">
+              <Image className="box-img" src={Website} alt="website-img" />
+            </div>
+            <p className="featureTitle p1">Immigration consulting website</p>
+            <p className="featureSub p1">Web Design / 2022</p>
+          </Link>
+        </div>
+        <div className="featureBox grid-2 grid">
+          <Link href="/courte">
+            <div className="wrapper-2 box">
+              <Image className="box-img" src={Courte} alt="courte-img" />
+            </div>
+            <p className="featureTitle">Courte Application</p>
+            <p className="featureSub">Front-developer / 2022</p>
+          </Link>
+        </div>
+        <div className="featureBox grid-3 grid">
+          <Link
+            href="https://www.behance.net/gallery/164680297/Poster-designs"
+            target="_blank"
+          >
+            <div className="wrapper-3 box">
+              <Image className="box-img3" src={Poster} alt="poster-img" />
+            </div>
+            <p className="featureTitle">Poster Design</p>
+            <p className="featureSub">Graphic Design / 2022</p>
+          </Link>
+        </div>
+        <div className="featureBox grid-4 grid">
+          <Link href="/picbeak">
+            <div className="wrapper-4 box">
+              <Image className="box-img4" src={Picbeak} alt="picbeak-img" />
+            </div>
+            <p className="featureTitle p4">Picbeak Web Application</p>
+            <p className="featureSub p4">Front-developer / 2022</p>
+          </Link>
+        </div>
+        <div className="featureBox grid-5 grid">
+          <Link
+            href="https://www.behance.net/gallery/164680771/Product-Photograhpy"
+            target="_blank"
+          >
+            <div className="wrapper-5 box">
+              <Image className="box-img5 photo1" src={Photo1} alt="image" />
+              <Image className="box-img5 photo2" src={Photo2} alt="image" />
+              <Image className="box-img5 photo3" src={Photo3} alt="image" />
+            </div>
+            <p className="featureTitle">Product Photography</p>
+            <p className="featureSub">Visual Styling / 2022</p>
+          </Link>
+        </div>
+        <div className="about-wrapper grid-6 grid">
+          <Link href="/about">
+            <div className="button">
+              <Image className="aboutme-small" src={Aboutme} alt="image" />
+              <span className="btn">About Me</span>
+              <div class="button__drow"></div>
+            </div>
+          </Link>
+        </div>
+      </Container>
+    </Wrapper>
   );
 };
+const Wrapper = styled.div`
+  width: 100vw;
+  height: auto;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
 
+  .headline {
+    font-size: calc((0.03 * 100vw + (45px)));
+    font-family: "outfit", sans-serif;
+    font-weight: 700;
+    padding: 20vh 5vw;
+    color: #000;
+    background-image: url("../images/decoImage.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+  }
+
+  @media (max-width: 653px) {
+    .headline {
+      font-size: calc((0.03 * 100vw + (30px)));
+      padding: 10vh 8vw;
+      background-position: center;
+      text-align: center;
+    }
+  }
+`;
 const Container = styled.div`
   display: grid;
   margin-right: 1rem;
