@@ -8,7 +8,7 @@ import decoImage from "../public/images/decoImage.png";
 const Work = () => {
   return (
     <Wrapper>
-      {/* <Header /> */}
+      <Header />
       <div className="headline">
         Curious Designer,
         <br />

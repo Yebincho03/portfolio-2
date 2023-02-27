@@ -6,6 +6,9 @@ import Header from "../components/Header";
 import Aboutme from "../public/images/aboutme.png";
 import Heart from "../public/images/Red-Heart.png";
 import X from "../public/images/x.png";
+import Behance from "../public/icons/behance.js";
+import GithubIcon from "../public/icons/github.js";
+import Linkedin from "../public/icons/linkedin.js";
 
 function About() {
   return (
@@ -91,6 +94,20 @@ function About() {
             <p className="small-text">+1 (236)-512-1029</p>
           </div>
         </div>
+        <div className="sns grid-6 grid">
+          <span className="subTitle">Explore more about me</span>
+          <div className="icon-section">
+            <a href="https://github.com/Yebincho03">
+              <Behance fill="#949494" className="icon" />
+            </a>
+            <a href="https://www.linkedin.com/in/yebincho/">
+              <Linkedin fill="#949494" className="icon" />
+            </a>
+            <a href="https://github.com/Yebincho03">
+              <GithubIcon fill="#949494" className="icon" />
+            </a>
+          </div>
+        </div>
       </div>
     </Container>
   );
@@ -121,14 +138,15 @@ const Container = styled.div`
     @media (max-width: 850px) {
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: repeat(5, 1fr);
-      grid-row-gap: 50px;
+      grid-template-rows: auto;
+      grid-row-gap: 5rem;
       grid-column-gap: 0px;
+      padding: 0 3rem;
 
-      .grid {
+      .grid-1 {
+        margin-top: 5rem;
         justify-self: center;
-        padding: 0 3rem;
-        text-align: center;
+        //text-align: center;
       }
 
       .grid-2 {
@@ -183,6 +201,42 @@ const Container = styled.div`
         left: 20px;
       }
 
+      .item1:hover {
+        animation: animateHeart 1.2s infinite;
+      }
+      @keyframes animateHeart {
+        0% {
+          transform: scale(0.8);
+        }
+        5% {
+          transform: scale(0.9);
+        }
+        10% {
+          transform: scale(0.8);
+        }
+        15% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(0.8);
+        }
+        100% {
+          transform: scale(0.8);
+        }
+      }
+
+      .item2:hover {
+        animation: rotation 1s linear infinite;
+      }
+      @keyframes rotation {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
       .profile-image {
         width: 300px;
         height: auto;
@@ -195,6 +249,17 @@ const Container = styled.div`
 
       .description {
         margin-top: 1rem;
+      }
+    }
+    .icon-section {
+      display: flex;
+      gap: 2rem;
+      padding: 2rem 0;
+
+      .icon:hover {
+        transform: translateY(-0.6em);
+        transition: transform 0.3s ease;
+        fill: ${globalColor.grey100};
       }
     }
   }

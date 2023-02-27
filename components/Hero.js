@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 import { globalColor, DescriptiveText } from "../shared/Style";
 import GithubIcon from "../public/icons/github.js";
 import Linkedin from "../public/icons/linkedin.js";
-import Behance from "../public/icons/behance";
+import Behance from "../public/icons/behance.js";
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({
@@ -60,17 +60,17 @@ const Hero = () => {
           <div className="icons">
             <div>
               <a href="https://github.com/Yebincho03">
-                <GithubIcon fill="#949494" />
+                <GithubIcon fill="#949494" className="icon" />
               </a>
             </div>
             <div>
               <a href="https://www.linkedin.com/in/yebincho/">
-                <Linkedin fill="#949494" />
+                <Linkedin fill="#949494" className="icon" />
               </a>
             </div>
             <div>
               <a href="https://github.com/Yebincho03">
-                <Behance fill="#949494" />
+                <Behance fill="#949494" className="icon" />
               </a>
             </div>
           </div>

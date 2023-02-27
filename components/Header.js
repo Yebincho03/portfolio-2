@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styled from "styled-components";
 import { globalColor } from "../shared/Style";
 import Link from "next/link";
@@ -46,7 +45,12 @@ const Header = () => {
                 : "navigation-items"
             }
           >
-            <Link href="/resume">Resume</Link>
+            <Link
+              href="https://drive.google.com/file/d/1qdi1nnWJX6kZ4nQaq-NQoxlqDZ1UykSt/view?usp=sharing"
+              target="_blank"
+            >
+              Resume
+            </Link>
           </span>
         </div>
       </div>

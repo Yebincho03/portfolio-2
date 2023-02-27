@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { globalColor } from "../shared/Style";
 import Website from "../public/images/thecompany-01.png";
 import Courte from "../public/images/courte.png";
@@ -14,25 +14,25 @@ import Aboutme from "../public/images/me.png";
 const Project = () => {
   return (
     <Container>
-      <div className="featureBox grid-1">
+      <div className="featureBox grid-1 grid">
         <Link href="https://www.the-company.ca" target="_blank">
           <div className="wrapper-1 box">
             <Image className="box-img" src={Website} />
           </div>
+          <p className="featureTitle p1">Immigration consulting website</p>
+          <p className="featureSub p1">Web Design / 2022</p>
         </Link>
-        <p className="featureTitle p1">Immigration consulting website</p>
-        <p className="featureSub p1">Web Design / 2022</p>
       </div>
-      <div className="featureBox grid-2">
-        <Link href="https://www.courte.app/" target="_blank">
+      <div className="featureBox grid-2 grid">
+        <Link href="/courte">
           <div className="wrapper-2 box">
             <Image className="box-img" src={Courte} />
           </div>
+          <p className="featureTitle">Courte Application</p>
+          <p className="featureSub">Front-developer / 2022</p>
         </Link>
-        <p className="featureTitle">Courte Application</p>
-        <p className="featureSub">Front-developer / 2022</p>
       </div>
-      <div className="featureBox grid-3">
+      <div className="featureBox grid-3 grid">
         <Link
           href="https://www.behance.net/gallery/164680297/Poster-designs"
           target="_blank"
@@ -40,18 +40,20 @@ const Project = () => {
           <div className="wrapper-3 box">
             <Image className="box-img3" src={Poster} />
           </div>
+          <p className="featureTitle">Poster Design</p>
+          <p className="featureSub">Graphic Design / 2022</p>
         </Link>
-        <p className="featureTitle">Poster Design</p>
-        <p className="featureSub">Graphic Design / 2022</p>
       </div>
-      <div className="featureBox grid-4">
-        <div className="wrapper-4 box">
-          <Image className="box-img4" src={Picbeak} />
-        </div>
-        <p className="featureTitle p4">Picbeak Web Application</p>
-        <p className="featureSub p4">Front-developer / 2022</p>
+      <div className="featureBox grid-4 grid">
+        <Link href="/picbeak">
+          <div className="wrapper-4 box">
+            <Image className="box-img4" src={Picbeak} />
+          </div>
+          <p className="featureTitle p4">Picbeak Web Application</p>
+          <p className="featureSub p4">Front-developer / 2022</p>
+        </Link>
       </div>
-      <div className="featureBox grid-5">
+      <div className="featureBox grid-5 grid">
         <Link
           href="https://www.behance.net/gallery/164680771/Product-Photograhpy"
           target="_blank"
@@ -61,11 +63,11 @@ const Project = () => {
             <Image className="box-img5 photo2" src={Photo2} />
             <Image className="box-img5 photo3" src={Photo3} />
           </div>
+          <p className="featureTitle">Product Photography</p>
+          <p className="featureSub">Visual Styling / 2022</p>
         </Link>
-        <p className="featureTitle">Product Photography</p>
-        <p className="featureSub">Visual Styling / 2022</p>
       </div>
-      <div className="about-wrapper grid-6">
+      <div className="about-wrapper grid-6 grid">
         <Link href="/about">
           <div className="button">
             <Image className="aboutme-small" src={Aboutme} />
@@ -97,12 +99,7 @@ const Container = styled.div`
     grid-column-gap: 0px;
     margin-top: 2rem;
 
-    .grid-1,
-    .grid-2,
-    .grid-3,
-    .grid-4,
-    .grid-5,
-    .grid-6 {
+    .grid {
       grid-column: 1 / span 1;
     }
 

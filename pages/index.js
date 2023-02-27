@@ -18,10 +18,9 @@ export default function Home() {
           href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500&family=Outfit:wght@300;400;500;800&display=swap"
           rel="stylesheet"
         />
-        <link rel="icon" href="./logo.png" />
+        <link rel="icon" href="./favicon.ico" />
       </Head>
       <Wrapper>
-        <Header />
         <Work />
       </Wrapper>
     </>
