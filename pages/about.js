@@ -97,8 +97,8 @@ function About() {
         <div className="sns grid-6 grid">
           <span className="subTitle">Explore more about me</span>
           <div className="icon-section">
-            <a href="https://github.com/Yebincho03">
-              <Behance fill="#949494" className="icon" />
+            <a href="https://www.behance.net/yebin-cho">
+              <Behance fill="#949494" className="icon" alt="behance" />
             </a>
             <a href="https://www.linkedin.com/in/yebincho/">
               <Linkedin fill="#949494" className="icon" />
