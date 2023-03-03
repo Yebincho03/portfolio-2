@@ -11,6 +11,7 @@ const Header = () => {
 
     return () => {
       setName(splitLocation);
+      console.log(splitLocation);
     };
   }, []);
 
