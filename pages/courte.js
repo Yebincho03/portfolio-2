@@ -1,10 +1,13 @@
 import Image from "next/image";
 import styled from "styled-components";
+import { useState } from "react";
 import React from "react";
 import { globalColor } from "../shared/Style";
 import Header from "../components/Header";
 import Hero from "../public/images/hero-courte.jpg";
 import Overview from "../public/images/overview-01.png";
+import Problem from "../public/images/problem.jpg";
+import Work from "../public/images/work.png";
 
 function Courte() {
   return (
@@ -20,11 +23,7 @@ function Courte() {
               Courte is a mobile application that offers a comprehensive
               solution to facilitate the use and sharing of public tennis courts
               by enabling users to find the closest parks with available courts,
-              manage queues and connect with nearby users to play together. As a
-              front-end developer, I used React Native with Expo along with the
-              Native Base component library to build Courte. I displayed dynamic
-              park data pulled from MongoDB via GraphQL queries on the landing
-              page.
+              manage queues and connect with nearby users to play together.
             </span>
           </div>
           <div className="grid-2 grid">
@@ -55,10 +54,24 @@ function Courte() {
             </p>
           </div>
         </div>
+        <div className="problem">
+          <div>
+            <p className="problem-title">OPPORTUNITY</p>
+            <p className="p-disc">
+              The first come, first serve basis is fair, but as the player count
+              increases, misunderstandings can arrise. current solutions for
+              tennis courts are focused on scheduling private courts and don't
+              consider the experience after getting in the court. with a close
+              connection to this challenge, it made sense for us to use our city
+              as a use case for our project.
+            </p>
+          </div>
+          <Image src={Problem} className="problem-img" alt="courte-problem" />
+        </div>
         <div className="overview">
           <div>
             <p className="overview-title">Overview of Courte</p>
-            <p>park list • join line • pairing</p>
+            <p>Park list • Join line • Pairing</p>
           </div>
           <Image
             src={Overview}
@@ -119,6 +132,9 @@ const Container = styled.div`
         margin-top: 5rem;
         width: 100% !important;
         height: auto;
+      }
+      .problem {
+        flex-direction: column;
       }
     }
 
@@ -195,6 +211,49 @@ const Container = styled.div`
         margin-top: 5rem;
         width: 1000px;
         height: auto;
+      }
+    }
+    .problem {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 900px;
+      gap: 2rem;
+
+      .problem-title {
+        letter-spacing: 1px;
+        font-size: 12px;
+        margin-bottom: 2rem;
+        font-weight: 500;
+        color: ${globalColor.grey10};
+      }
+      .p-disc {
+        font-size: 20px;
+        line-height: 30px;
+        color: ${globalColor.grey100};
+      }
+
+      .problem-img {
+        margin-top: 5rem;
+        width: 500px;
+        height: auto;
+        border-radius: 20px;
+      }
+    }
+    .howitwork {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      gap: 2rem;
+      background: #f5f5f5;
+
+      .work-img {
+        margin-top: 5rem;
+        width: 200px;
+        height: auto;
+        border-radius: 20px;
       }
     }
   }
