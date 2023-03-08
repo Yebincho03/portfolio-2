@@ -127,7 +127,7 @@ const Container = styled.div`
   grid-template-rows: auto;
   grid-column-gap: 108px;
   grid-row-gap: 24px;
-  height: 100vh;
+  height: auto;
   font-family: "outfit", sans-serif;
 
   @media (max-width: 900px) {
