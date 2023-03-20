@@ -47,7 +47,7 @@ const Header = () => {
             }
           >
             <Link
-              href="https://drive.google.com/file/d/1qdi1nnWJX6kZ4nQaq-NQoxlqDZ1UykSt/view?usp=sharing"
+              href="https://drive.google.com/file/d/1JcA35L-W1mvpAm2BY7cRb1RYmsVmPJ9M/view?usp=sharing"
               target="_blank"
             >
               Resume

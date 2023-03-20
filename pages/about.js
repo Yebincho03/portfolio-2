@@ -89,7 +89,7 @@ function About() {
           <span className="subTitle">Contact Me</span>
           <div className="section">
             <p className="small-text bold">EMAIL</p>
-            <p className="small-text">lucycho0314@gmail.com</p>
+            <p className="small-text">yebincho94@gmail.com</p>
             <p className="small-text bold">PHONE</p>
             <p className="small-text">+1 (236)-512-1029</p>
           </div>
