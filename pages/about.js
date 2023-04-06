@@ -13,7 +13,7 @@ import Linkedin from "../public/icons/linkedin.js";
 function About() {
   return (
     <Container>
-      <Header />
+      {/* <Header /> */}
       <div className="wrapper">
         <div className="img-container grid-1 grid">
           <Image className="deco item1" src={Heart} alt="heart" />

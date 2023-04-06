@@ -2,6 +2,7 @@ import Head from "next/head";
 import styled from "styled-components";
 import { globalColor } from "../shared/Style";
 import Project from "../components/Project";
+import Maintenance from "../components/Maintenance";
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
       </Head>
 
       <Wrapper>
-        <Project />
+        <Maintenance />
       </Wrapper>
     </Contanier>
   );
