@@ -4,7 +4,7 @@ export const globalColor = {
   grey100: "#212121",
   grey10: "#7a7a7a",
   white: "#FFFFFF",
-  primary: "#6096fd",
+  primary: "#8C81FF",
   secondary: "#74FAC0",
 };
 
