@@ -5,7 +5,7 @@ import React from "react";
 import { globalColor } from "../shared/Style";
 import Header from "../components/Header";
 import Hero from "../public/images/hero-courte.jpg";
-import Overview from "../public/images/overview-01.png";
+import Overview from "../public/images/courte-overview.png";
 import Problem from "../public/images/problem.jpg";
 import Work from "../public/images/work.png";
 
@@ -14,11 +14,12 @@ function Courte() {
     <Container>
       <Header />
       <div className="wrapper">
-        <div className="project-headline">Courte Application</div>
-        <Image src={Hero} className="heroImg" alt="court-heroimg" />
+        <div className="hero">
+          <Image src={Overview} className="heroImg" alt="court-heroimg" />
+        </div>
         <div className="grid-wrapper">
           <div className="grid-1 introduction grid">
-            <p className="intro">INTRODUCTION</p>
+            <h1 className="title">Overview</h1>
             <span className="introduction">
               Courte is a mobile application that offers a comprehensive
               solution to facilitate the use and sharing of public tennis courts
@@ -56,7 +57,7 @@ function Courte() {
         </div>
         <div className="problem">
           <div>
-            <p className="problem-title">OPPORTUNITY</p>
+            <h1 className="title">Problem</h1>
             <p className="p-disc">
               The first come, first serve basis is fair, but as the player count
               increases, misunderstandings can arrise. current solutions for
@@ -66,18 +67,6 @@ function Courte() {
               as a use case for our project.
             </p>
           </div>
-          <Image src={Problem} className="problem-img" alt="courte-problem" />
-        </div>
-        <div className="overview">
-          <div>
-            <p className="overview-title">Overview of Courte</p>
-            <p>Park list • Join line • Pairing</p>
-          </div>
-          <Image
-            src={Overview}
-            className="overview-img"
-            alt="courte-overview"
-          />
         </div>
       </div>
     </Container>
@@ -99,12 +88,19 @@ const Container = styled.div`
   font-family: "outfit", sans-serif;
 
   .wrapper {
-    padding: 10rem 0;
+    padding: 5rem 0;
     gap: 5rem;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
+
+    .hero {
+      width: 100vw;
+      height: auto;
+      background: #d1d8db;
+      text-align: center;
+    }
 
     @media (max-width: 850px) {
       .grid-wrapper {
@@ -119,17 +115,8 @@ const Container = styled.div`
           grid-column: 1 / span 1;
         }
       }
+
       .heroImg {
-        width: 100% !important;
-        height: auto;
-      }
-      .overview-title {
-        font-weight: 500;
-        font-size: 25px;
-        line-height: 50px;
-      }
-      .overview-img {
-        margin-top: 5rem;
         width: 100% !important;
         height: auto;
       }
@@ -156,14 +143,13 @@ const Container = styled.div`
       margin: 2rem 0;
       grid-column-gap: 2rem;
       grid-row-gap: 5rem;
-      color: ${globalColor.grey10};
+      color: ${globalColor.grey100};
 
       .grid-1 {
         grid-column: 1 / span 3;
 
         .introduction {
           font-size: 20px;
-          color: ${globalColor.grey100};
           line-height: 30px;
         }
       }
@@ -171,7 +157,6 @@ const Container = styled.div`
         grid-column: 1 / span 2;
       }
 
-      .intro,
       .myrole,
       .myteam,
       .timeline,
@@ -191,28 +176,6 @@ const Container = styled.div`
         }
       }
     }
-    .overview {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      text-align: center;
-      align-items: center;
-      background: #f5f5f5;
-      width: 100vw;
-      padding: 5rem 0;
-      color: ${globalColor.grey10};
-
-      .overview-title {
-        font-weight: 500;
-        font-size: 25px;
-        line-height: 50px;
-      }
-      .overview-img {
-        margin-top: 5rem;
-        width: 1000px;
-        height: auto;
-      }
-    }
     .problem {
       display: flex;
       justify-content: center;
@@ -220,13 +183,6 @@ const Container = styled.div`
       max-width: 900px;
       gap: 2rem;
 
-      .problem-title {
-        letter-spacing: 1px;
-        font-size: 12px;
-        margin-bottom: 2rem;
-        font-weight: 500;
-        color: ${globalColor.grey10};
-      }
       .p-disc {
         font-size: 20px;
         line-height: 30px;

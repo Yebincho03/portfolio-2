@@ -4,9 +4,9 @@ import Header from "./Header.js";
 import styled from "styled-components";
 import { globalColor } from "../shared/Style";
 import Website from "../public/images/thecompany-01.png";
-import Courte from "../public/images/courte.png";
+import Courte from "../public/images/courte-cover.jpg";
 import Poster from "../public/images/poster.png";
-import Picbeak from "../public/images/picbeak-image.png";
+import Picbeak from "../public/images/picbeak-cover.jpg";
 
 const Project = () => {
   return (
@@ -21,28 +21,48 @@ const Project = () => {
             Mobile app design and development @ Langara College.
           </p>
         </div>
-        <div className="btn-wrapper">
-          <div className="btn">Dive in</div>
-        </div>
-        <div className="projects-container">
-          <div className="box box1">
-            <div>
-              <Image src={Website} className="image" />
+        <a href="#section-1">
+          <div className="btn-wrapper">
+            <div className="btn">Dive in</div>
+          </div>
+        </a>
+        <div className="projects-container" id="section-1">
+          <div className="item">
+            <Image className="box" src={Website}></Image>
+            <div className="project-name">
+              <p>Consulting agency Responsive Web</p>
+              <span>Improved UI/UX on landing page.</span>
             </div>
           </div>
-          <div className="box box2">
-            <div>
-              <Image src={Courte} className="image" />
-            </div>
+          <div className="item">
+            <Link href="/courte" className="link">
+              <Image className="box" src={Courte}></Image>
+              <div className="project-name">
+                <p>Courte app</p>
+                <span>
+                  An app offers a comprehensive solution to facilitate the use
+                  and sharing of public tennis courts.
+                </span>
+              </div>
+            </Link>
           </div>
-          <div className="box box3">
-            <div>
-              <Image src={Picbeak} className="image" />
-            </div>
+          <div className="item">
+            <Link href="/picbeak">
+              <Image className="box" src={Picbeak}></Image>
+              <div className="project-name">
+                <p>Picbeak web app</p>
+                <span>
+                  Web app that provides educational information about bird
+                  species.
+                </span>
+              </div>
+            </Link>
           </div>
-          <div className="box box4">
-            <div>
-              <Image src={Poster} className="image" />
+          <div className="item">
+            <Image className="box" src={Picbeak}></Image>
+            <div className="project-name">
+              <p>Courte App</p>
+              <span>appp</span>
             </div>
           </div>
         </div>
@@ -59,7 +79,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: white;
-  width: 1000px;
+  width: 1200px;
   color: black;
 
   .headline {
@@ -71,14 +91,14 @@ const Container = styled.div`
     }
     p {
       font-size: 24px;
-      line-height: 34px;
-      font-weight: 500;
+      line-height: 40px;
+      font-weight: 600;
     }
   }
   .btn-wrapper {
     display: flex;
     justify-content: center;
-    margin: 4rem 0;
+    margin: 5rem 0;
   }
   .btn {
     background: ${globalColor.primary};
@@ -98,18 +118,32 @@ const Container = styled.div`
   .projects-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    width: 1000px;
+    gap: 60px;
+    width: 1200px;
 
-    .box {
-      background: #f5f5f5;
+    .item {
       width: 100%;
-      height: 300px;
-      border-radius: 30px;
+      cursor: pointer;
 
-      .image {
-        width: 300px;
+      .project-name {
+        padding: 20px 0;
+        p {
+          font-size: 21px;
+          line-height: 29px;
+          padding-bottom: 10px;
+          font-weight: 600;
+          color: ${globalColor.primary};
+        }
+        span {
+          font-size: 20px;
+          line-height: 32px;
+        }
+      }
+
+      .box {
+        width: 100%;
         height: auto;
+        border-radius: 20px;
       }
     }
   }

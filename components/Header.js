@@ -63,8 +63,8 @@ const Header = () => {
 
 const Wrapper = styled.div`
   width: 100%;
-  max-width: 1000px;
-  height: 15vh;
+  max-width: 1200px;
+  height: 13vh;
   display: flex;
   align-items: center;
   font-family: "outfit", sans-serif;
